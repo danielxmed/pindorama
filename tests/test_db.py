@@ -9,7 +9,7 @@ import pytest
 
 from pindorama import db
 
-# (column_name, sqlite_declared_type) — must match PINDORAMA_BOOTSTRAP_PROMPT.md §2.
+# (column_name, sqlite_declared_type) — must match the SCHEMA in src/pindorama/db.py (ADR-0003).
 EXPECTED_COLUMNS: tuple[tuple[str, str], ...] = (
     ("id", "INTEGER"),
     ("catalog_url", "TEXT"),

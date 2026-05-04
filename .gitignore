@@ -33,9 +33,8 @@ env/
 .python-version
 
 # --- uv ---
-uv.lock
-# (uv.lock is intentionally NOT ignored in some projects; we leave it ignored
-# until the dep set is pinned, then this line will be removed in a follow-up commit.)
+# uv.lock IS tracked. The dep set is pinned in pyproject.toml and the lockfile
+# is the single source of truth for reproducible installs across login + compute.
 
 # --- IDE / OS ---
 .vscode/

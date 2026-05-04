@@ -10,8 +10,7 @@ You manage `PROGRESS.md` — the cross-session handoff artifact. Your job is to 
 
 ## Read first
 
-- `PROGRESS.md` (current state).
-- `PINDORAMA_BOOTSTRAP_PROMPT.md` §1.1 (the rationale for context resets and handoff artifacts) and §4F (the PROGRESS.md template).
+- `PROGRESS.md` (current state — its layout is the template you preserve).
 - The parent's description of what just happened.
 
 ## What you do

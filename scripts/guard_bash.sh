@@ -9,7 +9,6 @@
 # block git commit when a HuggingFace token is staged.
 #
 # Stays narrow: this hook is NOT a style enforcer and NOT a general linter.
-# See PINDORAMA_BOOTSTRAP_PROMPT.md §1.5.
 set -euo pipefail
 
 # Read hook JSON from stdin.

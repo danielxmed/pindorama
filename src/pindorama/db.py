@@ -14,9 +14,9 @@ from __future__ import annotations
 import sqlite3
 from pathlib import Path
 
-# The schema is the literal CREATE TABLE block from PINDORAMA_BOOTSTRAP_PROMPT.md
-# §2 (Stage 1). Do NOT edit columns in place — extend with a follow-up migration
-# (a new ADR) instead. Old Parquet shards must remain valid against any past schema.
+# Schema is fixed by ADR-0003 (SQLite as source of truth). Do NOT edit columns
+# in place — extend with a follow-up migration (a new ADR) instead. Old Parquet
+# shards must remain valid against any past schema.
 SCHEMA: str = """
 CREATE TABLE IF NOT EXISTS works (
     id INTEGER PRIMARY KEY,

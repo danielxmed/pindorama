@@ -20,11 +20,9 @@ Three downstream pieces of the broader research arc live in **separate repositor
 2. A **finetune** of `Gemma 4 26B MoE` on the Pindorama dataset, used to generate large-scale synthetic data.
 3. A **from-scratch pretrained model** trained on Pindorama + that synthetic data.
 
-Anything in `PINDORAMA_BOOTSTRAP_PROMPT.md` that talks about downstream tokenizers, model finetuning, or pretraining experiments is **historical context for the broader project, not work to be done here**. Read it as background; do not act on it inside this repo.
-
 ## Status
 
-Pre-implementation. The repository scaffolding is bootstrapped per `PINDORAMA_BOOTSTRAP_PROMPT.md` (with the scope correction above). The pipeline itself has not yet been written. See [`PROGRESS.md`](./PROGRESS.md) for the stage manifest and the next concrete action.
+Pre-implementation. The repository scaffolding is in place; the pipeline itself has not yet been written. See [`PROGRESS.md`](./PROGRESS.md) for the stage manifest and the next concrete action.
 
 ## Pipeline (planned)
 
