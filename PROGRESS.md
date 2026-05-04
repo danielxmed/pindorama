@@ -9,26 +9,27 @@
 
 ## Next agent should start by…
 
-Asking Daniel the **two hard blockers** below (Q1 + Q2). Neither answer can be safely guessed without burning cycles on incompatible versions or putting the cleaned corpus on a purge-eligible filesystem.
+**Waiting on Daniel to populate the dependency lists in `pyproject.toml` manually** (he is researching canonical versions himself and has explicitly asked the agent NOT to propose or commit pins). Until that lands, Stage 1 cannot run — the scrape needs an HTTP client + HTML parser that aren't yet in the env.
 
-After Daniel answers, the next concrete action is: **implement Stage 1 — the catalog scraper at `src/pindorama/scrape_catalog.py`**, modeled around `src/pindorama/db.py:connect()` for state and following the rate-limit / etiquette rules in `CLAUDE.md` and `PINDORAMA_BOOTSTRAP_PROMPT.md` §2 ("Stage 1 — Catalog Scraping"). Pair the scraper with `tests/test_scrape_catalog.py` covering pagination edge cases (single page, empty page, malformed row), and keep the scraper idempotent against `metadata.sqlite`.
+When Daniel returns with a pinned `pyproject.toml`:
 
-The scaffolding bootstrapped in this commit is purely structural: directory layout, agent guides, ADRs, SLURM templates, sensors, and an empty `pyproject.toml` (deps deliberately unpinned — see Q1 below). No pipeline behavior exists yet, and no cluster work has happened — Daniel is on his Mac.
+1. `uv sync --dev` to install.
+2. `bash scripts/check.sh --full` to confirm everything still builds against the new pins.
+3. **Implement Stage 1 — the catalog scraper at `src/pindorama/scrape_catalog.py`**, modeled around `src/pindorama/db.py:connect()` for state and following the rate-limit / etiquette rules in `CLAUDE.md` and `PINDORAMA_BOOTSTRAP_PROMPT.md` §2 ("Stage 1 — Catalog Scraping"). Pair the scraper with `tests/test_scrape_catalog.py` covering pagination edge cases (single page, empty page, malformed row), and keep the scraper idempotent against `metadata.sqlite`.
+
+The scaffolding bootstrapped on 2026-05-04 is purely structural: directory layout, agent guides, ADRs, SLURM templates, sensors, and an empty `pyproject.toml`. No pipeline behavior exists yet, and no cluster work has happened — Daniel is on his Mac.
 
 ## Open verification questions for Daniel
 
-### Hard blockers (must answer before Stage 1+)
+### Resolved (2026-05-04)
 
-1. **Pinned dependency versions.** `pyproject.toml` ships with empty pin lists. **Please supply canonical versions** for:
-   - `torch`, `transformers`, `vllm` (these tend to be tightly coupled — what works on Alpine A100s today?).
-   - `pymupdf`, `datasketch`, `datasets`, `huggingface_hub`, `fasttext-langdetect` *or* `lingua-language-detector`.
-   - Commit hashes for `rednote-hilab/dots.ocr` and `datalab-to/chandra` (model repos and any inference-side dependencies).
-   If you'd rather we propose a set, say so and we will — but pinning without your input on the cluster's known-good combinations risks burning cycles on incompatible versions.
-2. **Long-term storage home for the cleaned corpus.** `/scratch/alpine/$USER` is purge-eligible and is the wrong final home. **Should the cleaned corpus live in `/projects/$USER/pindorama` or in PetaLibrary** (`docs/curc/petalibrary/`) for the publication build? The decision affects both `paths.py` and the dataset card's "Reproducing" section.
+1. ~~**Pinned dependency versions.**~~ **Deferred at Daniel's request.** Daniel will research canonical versions and pin `pyproject.toml` manually himself. **The agent must NOT propose or commit dep version changes without an explicit instruction from Daniel.** When the user says "go" with a pinned `pyproject.toml`, the next agent runs `uv sync --dev` and proceeds.
+2. ~~**Long-term storage home for the cleaned corpus.**~~ **Answered: `/projects/$USER/pindorama`.** Already encoded in `src/pindorama/paths.py:default()` (was the bootstrap default; now confirmed). PetaLibrary is **not** in scope.
+3. ~~**Tokenizer for `token_count` reporting.**~~ **Default accepted by silence: `TucanoBR/Tucano-2b4`.** The dataset card will report token counts against that tokenizer when Stage 7 ships. Re-open this question only if Daniel explicitly asks for a different tokenizer in a later session.
 
-### Soft decision (proposed default, not blocking)
+### Currently open
 
-3. **Tokenizer for `token_count` reporting in the dataset card.** The dataset card needs a single canonical tokenizer for the per-doc and total token counts; downstream consumers can re-tokenize against whatever they want. **Proposed default:** `TucanoBR/Tucano-2b4` (currently the strongest public Portuguese model). Push back if you'd rather use a different tokenizer (e.g. the one shipped with the Gemma 4 26B MoE checkpoint, once you've selected it for the *finetune repo*). If silent, we ship the default.
+(none)
 
 ## Stage manifest
 
@@ -48,7 +49,7 @@ The scaffolding bootstrapped in this commit is purely structural: directory layo
 ## Cross-cutting work (track here when surfaced)
 
 ```
-[ ] Pin dep versions in pyproject.toml once Q1 is answered; remove uv.lock from .gitignore at that point.
+[~] Pin dep versions in pyproject.toml — Daniel doing this himself manually. Once committed, remove `uv.lock` from .gitignore so the lockfile is tracked.
 [ ] Add a CI workflow that runs `bash scripts/check.sh` on PRs (low priority — local `--full` covers it for now).
 [ ] Decide whether to add a `tests/test_paths.py` smoke that constructs PindoramaPaths in a tmpdir.
 [ ] Author a `docs/runbooks/zenodo-doi-mint.md` once Stage 7 is close (Stage 8 is interactive).
@@ -66,3 +67,4 @@ The scaffolding bootstrapped in this commit is purely structural: directory layo
 ## Changelog
 
 - **2026-05-04** — Bootstrap commit. Repository scaffold created per `PINDORAMA_BOOTSTRAP_PROMPT.md` §4 with a scope correction (this repo is dataset-only; benchmark / finetune / from-scratch-pretrain live in separate, not-yet-created repos). Existing CURC documentation moved into `docs/curc/` (preserved verbatim, ~134 files). GitHub repo renamed `danielxmed/curc-docs` → `danielxmed/pindorama`. All sensors green (`bash scripts/check.sh --full`).
+- **2026-05-04** — Verification questions resolved. Q2 (storage home): Daniel confirmed `/projects/$USER/pindorama` — already the default in `paths.default()`, no code change. Q1 (deps): deferred — Daniel will research and pin `pyproject.toml` manually; agent must wait. Q3 (tokenizer): default `TucanoBR/Tucano-2b4` accepted by silence.
