@@ -5,7 +5,7 @@
 
 ## Scope reminder
 
-**This repo is dataset-only.** Scrape → triage → extract → dedup → package → push to HF + Zenodo. The benchmark, the Gemma 4 26B MoE finetune, and the from-scratch pretraining all live in **separate, not-yet-created** repositories. Anything in `PINDORAMA_BOOTSTRAP_PROMPT.md` that talks about downstream training is historical context only — do not act on it here.
+**This repo is dataset-only.** Scrape → triage → extract → dedup → package → push to HF + Zenodo. The benchmark, the Gemma 4 26B MoE finetune, and the from-scratch pretraining all live in **separate, not-yet-created** repositories.
 
 ## Next agent should start by…
 
@@ -15,7 +15,7 @@ When Daniel returns with a pinned `pyproject.toml`:
 
 1. `uv sync --dev` to install.
 2. `bash scripts/check.sh --full` to confirm everything still builds against the new pins.
-3. **Implement Stage 1 — the catalog scraper at `src/pindorama/scrape_catalog.py`**, modeled around `src/pindorama/db.py:connect()` for state and following the rate-limit / etiquette rules in `CLAUDE.md` and `PINDORAMA_BOOTSTRAP_PROMPT.md` §2 ("Stage 1 — Catalog Scraping"). Pair the scraper with `tests/test_scrape_catalog.py` covering pagination edge cases (single page, empty page, malformed row), and keep the scraper idempotent against `metadata.sqlite`.
+3. **Implement Stage 1 — the catalog scraper at `src/pindorama/scrape_catalog.py`**, modeled around `src/pindorama/db.py:connect()` for state and following the rate-limit / etiquette rules in `CLAUDE.md` (≤2 req/s against `dominiopublico.gov.br`). Pair the scraper with `tests/test_scrape_catalog.py` covering pagination edge cases (single page, empty page, malformed row), and keep the scraper idempotent against `metadata.sqlite`.
 
 The scaffolding bootstrapped on 2026-05-04 is purely structural: directory layout, agent guides, ADRs, SLURM templates, sensors, and an empty `pyproject.toml`. No pipeline behavior exists yet, and no cluster work has happened — Daniel is on his Mac.
 
@@ -66,5 +66,6 @@ The scaffolding bootstrapped on 2026-05-04 is purely structural: directory layou
 
 ## Changelog
 
-- **2026-05-04** — Bootstrap commit. Repository scaffold created per `PINDORAMA_BOOTSTRAP_PROMPT.md` §4 with a scope correction (this repo is dataset-only; benchmark / finetune / from-scratch-pretrain live in separate, not-yet-created repos). Existing CURC documentation moved into `docs/curc/` (preserved verbatim, ~134 files). GitHub repo renamed `danielxmed/curc-docs` → `danielxmed/pindorama`. All sensors green (`bash scripts/check.sh --full`).
+- **2026-05-04** — Bootstrap commit. Repository scaffold created with a dataset-only scope (benchmark / finetune / from-scratch-pretrain live in separate, not-yet-created repos). Existing CURC documentation moved into `docs/curc/` (preserved verbatim, ~134 files). GitHub repo renamed `danielxmed/curc-docs` → `danielxmed/pindorama`. All sensors green (`bash scripts/check.sh --full`).
 - **2026-05-04** — Verification questions resolved. Q2 (storage home): Daniel confirmed `/projects/$USER/pindorama` — already the default in `paths.default()`, no code change. Q1 (deps): deferred — Daniel will research and pin `pyproject.toml` manually; agent must wait. Q3 (tokenizer): default `TucanoBR/Tucano-2b4` accepted by silence.
+- **2026-05-04** — Removed `PINDORAMA_BOOTSTRAP_PROMPT.md` (the bootstrap-time scaffolding prompt). Inlined the few load-bearing references; cluster repo path moved from `/projects/$USER/curc-docs` → `/projects/$USER/pindorama/repo`.

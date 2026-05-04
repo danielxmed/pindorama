@@ -19,7 +19,7 @@ We need a state store that is:
 
 Use **SQLite** as the single source of truth for all per-document metadata. `metadata.sqlite` lives at `<scratch>/metadata.sqlite`. Connection mode: `journal_mode=WAL`, `foreign_keys=ON`.
 
-The schema is the literal `CREATE TABLE works` block from PINDORAMA_BOOTSTRAP_PROMPT.md §2 (Stage 1), encoded in `src/pindorama/db.py`. Every stage entry point:
+The schema is the `CREATE TABLE works` block in `src/pindorama/db.py`. Every stage entry point:
 
 1. Opens the DB.
 2. Queries for rows in the appropriate input state.

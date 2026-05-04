@@ -2,7 +2,7 @@
 
 Pindorama is a curated open dataset of Brazilian Portuguese literary public-domain texts, sourced from `dominiopublico.gov.br`, packaged for HuggingFace Hub + Zenodo. Target ≈220M tokens. See `README.md`.
 
-**Scope: dataset-only.** Scrape → triage → extract → dedup → package → push. No model training, no finetune, no benchmark — those live in other (not-yet-created) repos. If `PINDORAMA_BOOTSTRAP_PROMPT.md` talks about Gemma 4 finetuning or downstream tokenizers, read it as background and do **not** act on it here.
+**Scope: dataset-only.** Scrape → triage → extract → dedup → package → push. No model training, no finetune, no benchmark — those live in other (not-yet-created) repos.
 
 This file is the feedforward anchor. Read it on every fresh session before touching anything else.
 
@@ -45,7 +45,7 @@ This file is the feedforward anchor. Read it on every fresh session before touch
 - Do **not** delete files in `/scratch/alpine/$USER` without first backing up `metadata.sqlite`.
 - Do **not** encode A100 VRAM size or GPU count as constants — query at runtime (`nvidia-smi --query-gpu=memory.total`). 21 is the simultaneous-job cap, not an allocation.
 - Do **not** exceed 2 req/s against `dominiopublico.gov.br` (scrape or download).
-- Do **not** preemptively add scaffolding for failures you have not observed (see Operating Brief §1).
+- Do **not** preemptively add scaffolding for failures you have not observed.
 
 ## Pointers
 
@@ -55,7 +55,6 @@ This file is the feedforward anchor. Read it on every fresh session before touch
 - `docs/runbooks/` — connect-to-Alpine, recover-from-failed-stage.
 - `.claude/skills/` — load on demand: `alpine-slurm`, `pdf-extraction`, `vllm-ocr`, `huggingface-dataset`.
 - `PROGRESS.md` — stage manifest + handoff note. Read top first on every session resume.
-- `PINDORAMA_BOOTSTRAP_PROMPT.md` — original product/scientific brief. Compute facts in §3 override §2.
 
 ## Operating principles (brief)
 
