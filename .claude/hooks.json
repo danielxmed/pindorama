@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-hooks.json",
+  "_doc": "Pindorama hook configuration. Three responsibilities, in priority order: (1) block destructive bash patterns specific to the Alpine cluster layout, (2) block git operations that would leak secrets or push --force to main, (3) wire scripts/check.sh into the loop after edits so failures show up on the next turn. Anti-pattern guard: do NOT add style enforcement here (that lives in the linter sensor). See PINDORAMA_BOOTSTRAP_PROMPT.md §1.5.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash $CLAUDE_PROJECT_DIR/scripts/guard_bash.sh"
+          }
+        ]
+      },
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash $CLAUDE_PROJECT_DIR/scripts/guard_filewrite.sh"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash $CLAUDE_PROJECT_DIR/scripts/check.sh --fast"
+          }
+        ]
+      }
+    ]
+  }
+}

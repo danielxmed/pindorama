@@ -1,0 +1,70 @@
+# --- Secrets ---
+# Block all .env variants except the documented example.
+.env
+.env.*
+!.env.example
+HF_TOKEN
+*.pem
+*.key
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+.tox/
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+
+# --- Virtual envs ---
+.venv/
+venv/
+env/
+.python-version
+
+# --- uv ---
+uv.lock
+# (uv.lock is intentionally NOT ignored in some projects; we leave it ignored
+# until the dep set is pinned, then this line will be removed in a follow-up commit.)
+
+# --- IDE / OS ---
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# --- Cluster scratch paths ---
+# Prevent accidental commits of artifacts that should live on /scratch/alpine.
+/scratch/
+scratch/
+raw_pdfs/
+extracted_text/
+cleaned_text/
+*.sqlite
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+metadata.sqlite*
+
+# --- Generated artifacts ---
+*.parquet
+*.arrow
+corpus_report.md
+logs/
+slurm-*.out
+slurm-*.err
+
+# --- Notebooks output ---
+.ipynb_checkpoints/
