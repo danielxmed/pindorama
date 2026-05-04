@@ -1,0 +1,196 @@
+# Batch Jobs and Job Scripting
+
+Batch jobs are, by far, the most common type of job on our HPC system. Batch jobs are resource provisions that run applications on compute nodes and do not require supervision or interaction. Batch jobs are commonly used for applications that run for long periods of time or require little to no user input. 
+
+## Job Scripts
+
+Even though it is possible to run jobs completely from the command line, it is often overly tedious and unorganized to do so. Instead, Research Computing recommends constructing a job script for your batch jobs. A **job script** is a set of Linux commands paired with a set of resource requirements that can be passed to the Slurm job scheduler. Slurm will then generate a job according to the parameters set in the job script. Any commands that are included with the job script will be run within the job.
+
+## Running a Job Script
+
+Running a job script can be done with the `sbatch` command:
+
+```bash
+sbatch <your-job-script-name>
+```
+
+Because job scripts specify the desired resources for your job, you won't need to specify any resources on the command line. You can, however, overwrite or add any job parameter by providing the specific resource as a flag within `sbatch` command:
+
+```bash
+sbatch --partition=amilan <your-job-script>
+```
+
+Running this command would force your job to run on the amilan partition *no matter what your job script specified*.
+
+## Making a Job Script
+
+Although Research Computing provides a variety of different sample scripts users can utilize when running their own jobs, knowing how to draft a job script can be quite handy if you need to debug any errors in your jobs or you need to make substantial changes to a script.
+
+A job script looks something like this:
+
+```bash
+#!/bin/bash
+
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --time=00:10:00
+#SBATCH --partition=atesting
+#SBATCH --qos=testing
+#SBATCH --output=sample-%j.out
+
+module purge
+
+module load intel
+module load mkl
+
+echo "== This is the scripting step! =="
+sleep 30
+./executable.exe
+echo "== End of Job =="
+```
+
+Normally job scripts are divided into 3 primary parts: directives, loading software, and user scripting. Directives give the terminal and the Slurm daemon instructions on setting up the job. Loading software involves cleaning out the environment and loading specific pieces of software you need for your job. User scripting is simply the commands you wish to be executed in your job.  
+
+### 1. Directives
+
+A directive is a comment that is included at the top of a job script that tells the shell information about the script. 
+
+The first directive, the shebang directive, is always on the first line of any script. The directive indicates which shell you want running commands in your job. Most users employ bash as their shell, so we will specify bash by typing:
+
+```bash
+#!/bin/bash
+```
+
+The next directives that must be included with your job script are *sbatch* directives. These directives specify resource requirements to Slurm for a batch job.  These directives must come after the shebang directive and before any commands are issued in the job script. Each directive contains a flag that requests a resource the job would need to complete execution. An sbatch directive is written as such:
+
+```bash
+#SBATCH --<resource>=<amount>
+```
+
+For example, if you wanted to request 2 nodes with an sbatch directive, you would write:
+
+```bash
+#SBATCH --nodes=2
+```
+
+```{seealso}
+A list of some useful sbatch directives can be found on the [Slurm Flags, Partitions, and QoS](job-resources.md) page. A full list of commands can be found in Slurm's [documentation for sbatch](https://slurm.schedmd.com/sbatch.html).
+```
+
+### 2. Software
+
+Because jobs run on different nodes, any shared software that is needed must be loaded via the job script. Software can be loaded in a job script just like it would be on the command line. First, we will purge all software that may be left behind from your working environment on a compile node by running the command:
+
+```bash
+module purge
+```
+
+Next, you can load whatever software you need by running the following command:
+
+```bash
+module load <software>
+```
+
+```{seealso}
+More information about software modules can be found in the [Modules System](../compute/modules.md) page.
+```
+
+### 3. User Scripting
+
+The last part of a job script is the actual script. This includes all user commands that are needed to set up and execute the desired task. Any Linux command can be utilized in this step. Scripting can range from highly complex loops iterating over thousands of files to a simple call to an executable. Below is a simple example of some user scripting:
+
+```bash
+echo "== This is the scripting step! =="
+
+touch tempFile1.in
+touch tempFile2.in
+
+sleep 30
+./executable.exe tempfile1.in tempfile2.in
+
+echo "== End of Job =="
+```
+
+## Examples
+
+(tabset-ref-batch-scripting)=
+`````{tab-set}
+:sync-group: tabset-batch-scripting
+
+````{tab-item} Example 1 
+:sync: batch-scripting-ex1
+
+5 minutes, 1 node, 1 core C++ Job:
+
+```bash
+#!/bin/bash
+
+#SBATCH --nodes=1
+#SBATCH --time=00:05:00
+#SBATCH --partition=atesting
+#SBATCH --qos=testing
+#SBATCH --ntasks=1
+#SBATCH --job-name=cpp-job
+#SBATCH --output=cpp-job.%j.out
+
+module purge
+module load gcc
+
+./example_cpp.exe
+```
+
+````
+````{tab-item} Example 2
+:sync: batch-scripting-ex2
+
+7 minutes, 1 node, 4 cores C++ OpenMP Job:
+
+```bash
+#!/bin/bash
+
+#SBATCH --nodes=1
+#SBATCH --time=00:07:00
+#SBATCH --partition=atesting
+#SBATCH --qos=testing
+#SBATCH --ntasks=4
+#SBATCH --job-name=omp-cpp-job
+#SBATCH --output=omp-cpp-job.%j.out
+
+module purge
+module load gcc
+
+export OMP_NUM_THREADS=4
+
+./example_omp.exe
+```
+
+````
+
+````{tab-item} Example 3
+:sync: batch-scripting-ex3
+
+10 minutes, 2 nodes, 16 cores C++ MPI Job:
+
+```bash
+#!/bin/bash
+
+#SBATCH --nodes=2
+#SBATCH --time=00:10:00
+#SBATCH --partition=atesting
+#SBATCH --qos=testing
+#SBATCH --ntasks=16
+#SBATCH --job-name=mpi-cpp-job
+#SBATCH --output=mpi-cpp-job.%j.out
+
+module purge
+module load intel
+module load impi
+
+mpirun -np 16 ./example_mpi.exe
+```
+````
+`````
+
+
+
+

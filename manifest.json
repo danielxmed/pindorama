@@ -1,0 +1,801 @@
+{
+  "base_source_url": "https://curc.readthedocs.io/en/latest/_sources/",
+  "base_page_url": "https://curc.readthedocs.io/en/latest/",
+  "pages_fetched": 132,
+  "failures": 0,
+  "files": [
+    {
+      "relative_path": "index.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/index.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/index.html",
+      "output_file": "index.md"
+    },
+    {
+      "relative_path": "additional-resources/CURC-cheatsheet.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/additional-resources/CURC-cheatsheet.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/additional-resources/CURC-cheatsheet.html",
+      "output_file": "additional-resources/CURC-cheatsheet.md"
+    },
+    {
+      "relative_path": "additional-resources/amc_ssh_auth.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/additional-resources/amc_ssh_auth.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/additional-resources/amc_ssh_auth.html",
+      "output_file": "additional-resources/amc_ssh_auth.md"
+    },
+    {
+      "relative_path": "additional-resources/biokem-facility.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/additional-resources/biokem-facility.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/additional-resources/biokem-facility.html",
+      "output_file": "additional-resources/biokem-facility.md"
+    },
+    {
+      "relative_path": "additional-resources/blanca-MOU.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/additional-resources/blanca-MOU.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/additional-resources/blanca-MOU.html",
+      "output_file": "additional-resources/blanca-MOU.md"
+    },
+    {
+      "relative_path": "additional-resources/contrib_curc_docs.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/additional-resources/contrib_curc_docs.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/additional-resources/contrib_curc_docs.html",
+      "output_file": "additional-resources/contrib_curc_docs.md"
+    },
+    {
+      "relative_path": "additional-resources/courses_using_curc_resources.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/additional-resources/courses_using_curc_resources.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/additional-resources/courses_using_curc_resources.html",
+      "output_file": "additional-resources/courses_using_curc_resources.md"
+    },
+    {
+      "relative_path": "additional-resources/csu-xsede-usernames.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/additional-resources/csu-xsede-usernames.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/additional-resources/csu-xsede-usernames.html",
+      "output_file": "additional-resources/csu-xsede-usernames.md"
+    },
+    {
+      "relative_path": "additional-resources/facilities_equip_other.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/additional-resources/facilities_equip_other.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/additional-resources/facilities_equip_other.html",
+      "output_file": "additional-resources/facilities_equip_other.md"
+    },
+    {
+      "relative_path": "additional-resources/feedback.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/additional-resources/feedback.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/additional-resources/feedback.html",
+      "output_file": "additional-resources/feedback.md"
+    },
+    {
+      "relative_path": "additional-resources/policies.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/additional-resources/policies.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/additional-resources/policies.html",
+      "output_file": "additional-resources/policies.md"
+    },
+    {
+      "relative_path": "additional-resources/registrycilogon-instructions.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/additional-resources/registrycilogon-instructions.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/additional-resources/registrycilogon-instructions.html",
+      "output_file": "additional-resources/registrycilogon-instructions.md"
+    },
+    {
+      "relative_path": "ai-ml/ai-resources.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/ai-ml/ai-resources.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/ai-ml/ai-resources.html",
+      "output_file": "ai-ml/ai-resources.md"
+    },
+    {
+      "relative_path": "ai-ml/llms.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/ai-ml/llms.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/ai-ml/llms.html",
+      "output_file": "ai-ml/llms.md"
+    },
+    {
+      "relative_path": "cloud/aws/index.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/aws/index.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/aws/index.html",
+      "output_file": "cloud/aws/index.md"
+    },
+    {
+      "relative_path": "cloud/azure/index.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/azure/index.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/azure/index.html",
+      "output_file": "cloud/azure/index.md"
+    },
+    {
+      "relative_path": "cloud/cumulus.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/cumulus.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/cumulus.html",
+      "output_file": "cloud/cumulus.md"
+    },
+    {
+      "relative_path": "cloud/gcp/index.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/gcp/index.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/gcp/index.html",
+      "output_file": "cloud/gcp/index.md"
+    },
+    {
+      "relative_path": "clusters/alpine/index.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/clusters/alpine/index.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/clusters/alpine/index.html",
+      "output_file": "clusters/alpine/index.md"
+    },
+    {
+      "relative_path": "clusters/blanca/blanca.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/clusters/blanca/blanca.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/clusters/blanca/blanca.html",
+      "output_file": "clusters/blanca/blanca.md"
+    },
+    {
+      "relative_path": "clusters/summit/summit.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/clusters/summit/summit.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/clusters/summit/summit.html",
+      "output_file": "clusters/summit/summit.md"
+    },
+    {
+      "relative_path": "compute/compiling.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/compute/compiling.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/compute/compiling.html",
+      "output_file": "compute/compiling.md"
+    },
+    {
+      "relative_path": "compute/data-transfer.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/compute/data-transfer.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/compute/data-transfer.html",
+      "output_file": "compute/data-transfer.md"
+    },
+    {
+      "relative_path": "compute/filesystems.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/compute/filesystems.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/compute/filesystems.html",
+      "output_file": "compute/filesystems.md"
+    },
+    {
+      "relative_path": "compute/modules.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/compute/modules.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/compute/modules.html",
+      "output_file": "compute/modules.md"
+    },
+    {
+      "relative_path": "compute/monitoring-resources.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/compute/monitoring-resources.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/compute/monitoring-resources.html",
+      "output_file": "compute/monitoring-resources.md"
+    },
+    {
+      "relative_path": "compute/node-types.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/compute/node-types.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/compute/node-types.html",
+      "output_file": "compute/node-types.md"
+    },
+    {
+      "relative_path": "getting_started/acknowledge_curc_resources.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/getting_started/acknowledge_curc_resources.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/getting_started/acknowledge_curc_resources.html",
+      "output_file": "getting_started/acknowledge_curc_resources.md"
+    },
+    {
+      "relative_path": "getting_started/faq.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/getting_started/faq.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/getting_started/faq.html",
+      "output_file": "getting_started/faq.md"
+    },
+    {
+      "relative_path": "getting_started/logging-in.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/getting_started/logging-in.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/getting_started/logging-in.html",
+      "output_file": "getting_started/logging-in.md"
+    },
+    {
+      "relative_path": "getting_started/navigating_docs.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/getting_started/navigating_docs.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/getting_started/navigating_docs.html",
+      "output_file": "getting_started/navigating_docs.md"
+    },
+    {
+      "relative_path": "getting_started/trainings_and_consults/index.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/getting_started/trainings_and_consults/index.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/getting_started/trainings_and_consults/index.html",
+      "output_file": "getting_started/trainings_and_consults/index.md"
+    },
+    {
+      "relative_path": "open_ondemand/index.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/open_ondemand/index.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/open_ondemand/index.html",
+      "output_file": "open_ondemand/index.md"
+    },
+    {
+      "relative_path": "petalibrary/allocation_types.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/petalibrary/allocation_types.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/petalibrary/allocation_types.html",
+      "output_file": "petalibrary/allocation_types.md"
+    },
+    {
+      "relative_path": "petalibrary/billing.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/petalibrary/billing.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/petalibrary/billing.html",
+      "output_file": "petalibrary/billing.md"
+    },
+    {
+      "relative_path": "petalibrary/data_transfer.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/petalibrary/data_transfer.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/petalibrary/data_transfer.html",
+      "output_file": "petalibrary/data_transfer.md"
+    },
+    {
+      "relative_path": "petalibrary/index.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/petalibrary/index.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/petalibrary/index.html",
+      "output_file": "petalibrary/index.md"
+    },
+    {
+      "relative_path": "petalibrary/ownership.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/petalibrary/ownership.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/petalibrary/ownership.html",
+      "output_file": "petalibrary/ownership.md"
+    },
+    {
+      "relative_path": "petalibrary/usage_statistics.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/petalibrary/usage_statistics.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/petalibrary/usage_statistics.html",
+      "output_file": "petalibrary/usage_statistics.md"
+    },
+    {
+      "relative_path": "petalibrary/zfs_snapshots.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/petalibrary/zfs_snapshots.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/petalibrary/zfs_snapshots.html",
+      "output_file": "petalibrary/zfs_snapshots.md"
+    },
+    {
+      "relative_path": "programming/MPI-CF.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/programming/MPI-CF.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/programming/MPI-CF.html",
+      "output_file": "programming/MPI-CF.md"
+    },
+    {
+      "relative_path": "programming/MPIBestpractices.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/programming/MPIBestpractices.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/programming/MPIBestpractices.html",
+      "output_file": "programming/MPIBestpractices.md"
+    },
+    {
+      "relative_path": "programming/OpenMP-CF.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/programming/OpenMP-CF.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/programming/OpenMP-CF.html",
+      "output_file": "programming/OpenMP-CF.md"
+    },
+    {
+      "relative_path": "programming/coding-best-practices.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/programming/coding-best-practices.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/programming/coding-best-practices.html",
+      "output_file": "programming/coding-best-practices.md"
+    },
+    {
+      "relative_path": "programming/parallel-programming-fundamentals.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/programming/parallel-programming-fundamentals.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/programming/parallel-programming-fundamentals.html",
+      "output_file": "programming/parallel-programming-fundamentals.md"
+    },
+    {
+      "relative_path": "programming/profiling-nvidia-gpu-performance.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/programming/profiling-nvidia-gpu-performance.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/programming/profiling-nvidia-gpu-performance.html",
+      "output_file": "programming/profiling-nvidia-gpu-performance.md"
+    },
+    {
+      "relative_path": "running-jobs/batch-jobs.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/running-jobs/batch-jobs.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/running-jobs/batch-jobs.html",
+      "output_file": "running-jobs/batch-jobs.md"
+    },
+    {
+      "relative_path": "running-jobs/interactive-jobs.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/running-jobs/interactive-jobs.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/running-jobs/interactive-jobs.html",
+      "output_file": "running-jobs/interactive-jobs.md"
+    },
+    {
+      "relative_path": "running-jobs/job-arrays.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/running-jobs/job-arrays.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/running-jobs/job-arrays.html",
+      "output_file": "running-jobs/job-arrays.md"
+    },
+    {
+      "relative_path": "running-jobs/job-resources.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/running-jobs/job-resources.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/running-jobs/job-resources.html",
+      "output_file": "running-jobs/job-resources.md"
+    },
+    {
+      "relative_path": "running-jobs/roce-enabled.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/running-jobs/roce-enabled.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/running-jobs/roce-enabled.html",
+      "output_file": "running-jobs/roce-enabled.md"
+    },
+    {
+      "relative_path": "running-jobs/running-apps-with-jobs.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/running-jobs/running-apps-with-jobs.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/running-jobs/running-apps-with-jobs.html",
+      "output_file": "running-jobs/running-apps-with-jobs.md"
+    },
+    {
+      "relative_path": "running-jobs/slurm-commands.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/running-jobs/slurm-commands.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/running-jobs/slurm-commands.html",
+      "output_file": "running-jobs/slurm-commands.md"
+    },
+    {
+      "relative_path": "running-jobs/squeue-status-codes.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/running-jobs/squeue-status-codes.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/running-jobs/squeue-status-codes.html",
+      "output_file": "running-jobs/squeue-status-codes.md"
+    },
+    {
+      "relative_path": "software/GNUParallel.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/software/GNUParallel.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/software/GNUParallel.html",
+      "output_file": "software/GNUParallel.md"
+    },
+    {
+      "relative_path": "software/alphafold.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/software/alphafold.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/software/alphafold.html",
+      "output_file": "software/alphafold.md"
+    },
+    {
+      "relative_path": "software/containerization.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/software/containerization.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/software/containerization.html",
+      "output_file": "software/containerization.md"
+    },
+    {
+      "relative_path": "software/curc_provided_software.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/software/curc_provided_software.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/software/curc_provided_software.html",
+      "output_file": "software/curc_provided_software.md"
+    },
+    {
+      "relative_path": "software/gaussian.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/software/gaussian.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/software/gaussian.html",
+      "output_file": "software/gaussian.md"
+    },
+    {
+      "relative_path": "software/loadbalancer.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/software/loadbalancer.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/software/loadbalancer.html",
+      "output_file": "software/loadbalancer.md"
+    },
+    {
+      "relative_path": "software/matlab.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/software/matlab.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/software/matlab.html",
+      "output_file": "software/matlab.md"
+    },
+    {
+      "relative_path": "software/python.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/software/python.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/software/python.html",
+      "output_file": "software/python.md"
+    },
+    {
+      "relative_path": "software/rapids.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/software/rapids.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/software/rapids.html",
+      "output_file": "software/rapids.md"
+    },
+    {
+      "relative_path": "software/spack.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/software/spack.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/software/spack.html",
+      "output_file": "software/spack.md"
+    },
+    {
+      "relative_path": "software/sratoolkit.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/software/sratoolkit.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/software/sratoolkit.html",
+      "output_file": "software/sratoolkit.md"
+    },
+    {
+      "relative_path": "software/uv.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/software/uv.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/software/uv.html",
+      "output_file": "software/uv.md"
+    },
+    {
+      "relative_path": "software/vasp.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/software/vasp.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/software/vasp.html",
+      "output_file": "software/vasp.md"
+    },
+    {
+      "relative_path": "getting_started/trainings_and_consults/current-sem-trainings.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/getting_started/trainings_and_consults/current-sem-trainings.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/getting_started/trainings_and_consults/current-sem-trainings.html",
+      "output_file": "getting_started/trainings_and_consults/current-sem-trainings.md"
+    },
+    {
+      "relative_path": "cloud/aws/lca0/index.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/aws/lca0/index.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/aws/lca0/index.html",
+      "output_file": "cloud/aws/lca0/index.md"
+    },
+    {
+      "relative_path": "cloud/aws/lca1/index.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/aws/lca1/index.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/aws/lca1/index.html",
+      "output_file": "cloud/aws/lca1/index.md"
+    },
+    {
+      "relative_path": "cloud/azure/Microsoft-Azure-for-Academic-Research.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/azure/Microsoft-Azure-for-Academic-Research.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/azure/Microsoft-Azure-for-Academic-Research.html",
+      "output_file": "cloud/azure/Microsoft-Azure-for-Academic-Research.md"
+    },
+    {
+      "relative_path": "cloud/azure/billing/index.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/azure/billing/index.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/azure/billing/index.html",
+      "output_file": "cloud/azure/billing/index.md"
+    },
+    {
+      "relative_path": "cloud/azure/budget-actions/budget-actions.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/azure/budget-actions/budget-actions.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/azure/budget-actions/budget-actions.html",
+      "output_file": "cloud/azure/budget-actions/budget-actions.md"
+    },
+    {
+      "relative_path": "cloud/azure/faq/faq.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/azure/faq/faq.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/azure/faq/faq.html",
+      "output_file": "cloud/azure/faq/faq.md"
+    },
+    {
+      "relative_path": "cloud/gcp/Google-Cloud-research-credits.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/gcp/Google-Cloud-research-credits.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/gcp/Google-Cloud-research-credits.html",
+      "output_file": "cloud/gcp/Google-Cloud-research-credits.md"
+    },
+    {
+      "relative_path": "clusters/alpine/allocations.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/clusters/alpine/allocations.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/clusters/alpine/allocations.html",
+      "output_file": "clusters/alpine/allocations.md"
+    },
+    {
+      "relative_path": "clusters/alpine/alpine-hardware.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/clusters/alpine/alpine-hardware.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/clusters/alpine/alpine-hardware.html",
+      "output_file": "clusters/alpine/alpine-hardware.md"
+    },
+    {
+      "relative_path": "clusters/alpine/condo-fairshare-and-resource-access.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/clusters/alpine/condo-fairshare-and-resource-access.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/clusters/alpine/condo-fairshare-and-resource-access.html",
+      "output_file": "clusters/alpine/condo-fairshare-and-resource-access.md"
+    },
+    {
+      "relative_path": "clusters/alpine/important-notes.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/clusters/alpine/important-notes.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/clusters/alpine/important-notes.html",
+      "output_file": "clusters/alpine/important-notes.md"
+    },
+    {
+      "relative_path": "clusters/alpine/moving-from-summit.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/clusters/alpine/moving-from-summit.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/clusters/alpine/moving-from-summit.html",
+      "output_file": "clusters/alpine/moving-from-summit.md"
+    },
+    {
+      "relative_path": "clusters/alpine/quick-start.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/clusters/alpine/quick-start.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/clusters/alpine/quick-start.html",
+      "output_file": "clusters/alpine/quick-start.md"
+    },
+    {
+      "relative_path": "clusters/alpine/slurm_directive_ex.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/clusters/alpine/slurm_directive_ex.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/clusters/alpine/slurm_directive_ex.html",
+      "output_file": "clusters/alpine/slurm_directive_ex.md"
+    },
+    {
+      "relative_path": "petalibrary/data_transfer/gdrive.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/petalibrary/data_transfer/gdrive.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/petalibrary/data_transfer/gdrive.html",
+      "output_file": "petalibrary/data_transfer/gdrive.md"
+    },
+    {
+      "relative_path": "petalibrary/data_transfer/guestcollection.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/petalibrary/data_transfer/guestcollection.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/petalibrary/data_transfer/guestcollection.html",
+      "output_file": "petalibrary/data_transfer/guestcollection.md"
+    },
+    {
+      "relative_path": "petalibrary/data_transfer/rclone.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/petalibrary/data_transfer/rclone.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/petalibrary/data_transfer/rclone.html",
+      "output_file": "petalibrary/data_transfer/rclone.md"
+    },
+    {
+      "relative_path": "petalibrary/data_transfer/onedrive.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/petalibrary/data_transfer/onedrive.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/petalibrary/data_transfer/onedrive.html",
+      "output_file": "petalibrary/data_transfer/onedrive.md"
+    },
+    {
+      "relative_path": "open_ondemand/files_app.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/open_ondemand/files_app.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/open_ondemand/files_app.html",
+      "output_file": "open_ondemand/files_app.md"
+    },
+    {
+      "relative_path": "getting_started/trainings_and_consults/online-trainings.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/getting_started/trainings_and_consults/online-trainings.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/getting_started/trainings_and_consults/online-trainings.html",
+      "output_file": "getting_started/trainings_and_consults/online-trainings.md"
+    },
+    {
+      "relative_path": "open_ondemand/configuring_apps.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/open_ondemand/configuring_apps.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/open_ondemand/configuring_apps.html",
+      "output_file": "open_ondemand/configuring_apps.md"
+    },
+    {
+      "relative_path": "open_ondemand/core_desktop.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/open_ondemand/core_desktop.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/open_ondemand/core_desktop.html",
+      "output_file": "open_ondemand/core_desktop.md"
+    },
+    {
+      "relative_path": "open_ondemand/jobs_app.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/open_ondemand/jobs_app.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/open_ondemand/jobs_app.html",
+      "output_file": "open_ondemand/jobs_app.md"
+    },
+    {
+      "relative_path": "open_ondemand/jupyter_session.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/open_ondemand/jupyter_session.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/open_ondemand/jupyter_session.html",
+      "output_file": "open_ondemand/jupyter_session.md"
+    },
+    {
+      "relative_path": "open_ondemand/matlab.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/open_ondemand/matlab.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/open_ondemand/matlab.html",
+      "output_file": "open_ondemand/matlab.md"
+    },
+    {
+      "relative_path": "open_ondemand/rstudio.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/open_ondemand/rstudio.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/open_ondemand/rstudio.html",
+      "output_file": "open_ondemand/rstudio.md"
+    },
+    {
+      "relative_path": "open_ondemand/terminal_app.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/open_ondemand/terminal_app.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/open_ondemand/terminal_app.html",
+      "output_file": "open_ondemand/terminal_app.md"
+    },
+    {
+      "relative_path": "open_ondemand/vs_code-server.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/open_ondemand/vs_code-server.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/open_ondemand/vs_code-server.html",
+      "output_file": "open_ondemand/vs_code-server.md"
+    },
+    {
+      "relative_path": "petalibrary/data_transfer/mounting.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/petalibrary/data_transfer/mounting.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/petalibrary/data_transfer/mounting.html",
+      "output_file": "petalibrary/data_transfer/mounting.md"
+    },
+    {
+      "relative_path": "petalibrary/data_transfer/synology.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/petalibrary/data_transfer/synology.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/petalibrary/data_transfer/synology.html",
+      "output_file": "petalibrary/data_transfer/synology.md"
+    },
+    {
+      "relative_path": "cloud/aws/lca0/AWS-Programs-for-Research-and-Education.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/aws/lca0/AWS-Programs-for-Research-and-Education.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/aws/lca0/AWS-Programs-for-Research-and-Education.html",
+      "output_file": "cloud/aws/lca0/AWS-Programs-for-Research-and-Education.md"
+    },
+    {
+      "relative_path": "cloud/aws/lca0/billing/index.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/aws/lca0/billing/index.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/aws/lca0/billing/index.html",
+      "output_file": "cloud/aws/lca0/billing/index.md"
+    },
+    {
+      "relative_path": "cloud/aws/lca0/faq/faq.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/aws/lca0/faq/faq.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/aws/lca0/faq/faq.html",
+      "output_file": "cloud/aws/lca0/faq/faq.md"
+    },
+    {
+      "relative_path": "cloud/aws/lca0/getting-started/index.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/aws/lca0/getting-started/index.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/aws/lca0/getting-started/index.html",
+      "output_file": "cloud/aws/lca0/getting-started/index.md"
+    },
+    {
+      "relative_path": "cloud/aws/lca0/load-balancer/load-balancer.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/aws/lca0/load-balancer/load-balancer.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/aws/lca0/load-balancer/load-balancer.html",
+      "output_file": "cloud/aws/lca0/load-balancer/load-balancer.md"
+    },
+    {
+      "relative_path": "cloud/aws/lca0/troubleshooting/troubleshooting.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/aws/lca0/troubleshooting/troubleshooting.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/aws/lca0/troubleshooting/troubleshooting.html",
+      "output_file": "cloud/aws/lca0/troubleshooting/troubleshooting.md"
+    },
+    {
+      "relative_path": "cloud/aws/lca1/billing/index.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/aws/lca1/billing/index.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/aws/lca1/billing/index.html",
+      "output_file": "cloud/aws/lca1/billing/index.md"
+    },
+    {
+      "relative_path": "cloud/aws/lca1/customer-ssp/index.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/aws/lca1/customer-ssp/index.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/aws/lca1/customer-ssp/index.html",
+      "output_file": "cloud/aws/lca1/customer-ssp/index.md"
+    },
+    {
+      "relative_path": "cloud/aws/lca1/data-classification.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/aws/lca1/data-classification.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/aws/lca1/data-classification.html",
+      "output_file": "cloud/aws/lca1/data-classification.md"
+    },
+    {
+      "relative_path": "cloud/aws/lca1/faq/index.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/aws/lca1/faq/index.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/aws/lca1/faq/index.html",
+      "output_file": "cloud/aws/lca1/faq/index.md"
+    },
+    {
+      "relative_path": "cloud/aws/lca1/getting-started/index.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/aws/lca1/getting-started/index.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/aws/lca1/getting-started/index.html",
+      "output_file": "cloud/aws/lca1/getting-started/index.md"
+    },
+    {
+      "relative_path": "cloud/aws/lca1/incident-response.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/aws/lca1/incident-response.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/aws/lca1/incident-response.html",
+      "output_file": "cloud/aws/lca1/incident-response.md"
+    },
+    {
+      "relative_path": "cloud/aws/lca1/networking.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/aws/lca1/networking.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/aws/lca1/networking.html",
+      "output_file": "cloud/aws/lca1/networking.md"
+    },
+    {
+      "relative_path": "cloud/azure/billing/billing.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/azure/billing/billing.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/azure/billing/billing.html",
+      "output_file": "cloud/azure/billing/billing.md"
+    },
+    {
+      "relative_path": "cloud/azure/billing/cost-est.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/azure/billing/cost-est.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/azure/billing/cost-est.html",
+      "output_file": "cloud/azure/billing/cost-est.md"
+    },
+    {
+      "relative_path": "cloud/aws/lca0/billing/budget-actions.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/aws/lca0/billing/budget-actions.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/aws/lca0/billing/budget-actions.html",
+      "output_file": "cloud/aws/lca0/billing/budget-actions.md"
+    },
+    {
+      "relative_path": "cloud/aws/lca0/billing/cost-est.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/aws/lca0/billing/cost-est.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/aws/lca0/billing/cost-est.html",
+      "output_file": "cloud/aws/lca0/billing/cost-est.md"
+    },
+    {
+      "relative_path": "cloud/aws/lca0/billing/viewbilling.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/aws/lca0/billing/viewbilling.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/aws/lca0/billing/viewbilling.html",
+      "output_file": "cloud/aws/lca0/billing/viewbilling.md"
+    },
+    {
+      "relative_path": "cloud/aws/lca0/getting-started/aws-cli-saml2aws.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/aws/lca0/getting-started/aws-cli-saml2aws.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/aws/lca0/getting-started/aws-cli-saml2aws.html",
+      "output_file": "cloud/aws/lca0/getting-started/aws-cli-saml2aws.md"
+    },
+    {
+      "relative_path": "cloud/aws/lca0/getting-started/aws-console-access.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/aws/lca0/getting-started/aws-console-access.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/aws/lca0/getting-started/aws-console-access.html",
+      "output_file": "cloud/aws/lca0/getting-started/aws-console-access.md"
+    },
+    {
+      "relative_path": "cloud/aws/lca0/getting-started/customer-permission-boundary.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/aws/lca0/getting-started/customer-permission-boundary.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/aws/lca0/getting-started/customer-permission-boundary.html",
+      "output_file": "cloud/aws/lca0/getting-started/customer-permission-boundary.md"
+    },
+    {
+      "relative_path": "cloud/aws/lca0/getting-started/customer-support.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/aws/lca0/getting-started/customer-support.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/aws/lca0/getting-started/customer-support.html",
+      "output_file": "cloud/aws/lca0/getting-started/customer-support.md"
+    },
+    {
+      "relative_path": "cloud/aws/lca0/getting-started/managing-grouper-groups.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/aws/lca0/getting-started/managing-grouper-groups.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/aws/lca0/getting-started/managing-grouper-groups.html",
+      "output_file": "cloud/aws/lca0/getting-started/managing-grouper-groups.md"
+    },
+    {
+      "relative_path": "cloud/aws/lca0/getting-started/non-cu-boulder/index.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/aws/lca0/getting-started/non-cu-boulder/index.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/aws/lca0/getting-started/non-cu-boulder/index.html",
+      "output_file": "cloud/aws/lca0/getting-started/non-cu-boulder/index.md"
+    },
+    {
+      "relative_path": "cloud/aws/lca1/billing/budget-actions.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/aws/lca1/billing/budget-actions.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/aws/lca1/billing/budget-actions.html",
+      "output_file": "cloud/aws/lca1/billing/budget-actions.md"
+    },
+    {
+      "relative_path": "cloud/aws/lca1/billing/viewbilling.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/aws/lca1/billing/viewbilling.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/aws/lca1/billing/viewbilling.html",
+      "output_file": "cloud/aws/lca1/billing/viewbilling.md"
+    },
+    {
+      "relative_path": "cloud/aws/lca1/getting-started/shared-responsibility-model.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/aws/lca1/getting-started/shared-responsibility-model.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/aws/lca1/getting-started/shared-responsibility-model.html",
+      "output_file": "cloud/aws/lca1/getting-started/shared-responsibility-model.md"
+    },
+    {
+      "relative_path": "cloud/aws/lca1/getting-started/aws-restricted-regions.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/aws/lca1/getting-started/aws-restricted-regions.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/aws/lca1/getting-started/aws-restricted-regions.html",
+      "output_file": "cloud/aws/lca1/getting-started/aws-restricted-regions.md"
+    },
+    {
+      "relative_path": "cloud/aws/lca1/getting-started/aws-cli-access.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/aws/lca1/getting-started/aws-cli-access.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/aws/lca1/getting-started/aws-cli-access.html",
+      "output_file": "cloud/aws/lca1/getting-started/aws-cli-access.md"
+    },
+    {
+      "relative_path": "cloud/aws/lca1/getting-started/aws-console-access.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/aws/lca1/getting-started/aws-console-access.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/aws/lca1/getting-started/aws-console-access.html",
+      "output_file": "cloud/aws/lca1/getting-started/aws-console-access.md"
+    },
+    {
+      "relative_path": "cloud/aws/lca1/getting-started/customer-permission-boundary.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/aws/lca1/getting-started/customer-permission-boundary.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/aws/lca1/getting-started/customer-permission-boundary.html",
+      "output_file": "cloud/aws/lca1/getting-started/customer-permission-boundary.md"
+    },
+    {
+      "relative_path": "cloud/aws/lca1/getting-started/managing-grouper-groups.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/aws/lca1/getting-started/managing-grouper-groups.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/aws/lca1/getting-started/managing-grouper-groups.html",
+      "output_file": "cloud/aws/lca1/getting-started/managing-grouper-groups.md"
+    },
+    {
+      "relative_path": "cloud/aws/lca0/getting-started/non-cu-boulder/aws-console-access-non-cu-boulder.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/aws/lca0/getting-started/non-cu-boulder/aws-console-access-non-cu-boulder.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/aws/lca0/getting-started/non-cu-boulder/aws-console-access-non-cu-boulder.html",
+      "output_file": "cloud/aws/lca0/getting-started/non-cu-boulder/aws-console-access-non-cu-boulder.md"
+    },
+    {
+      "relative_path": "cloud/aws/lca0/getting-started/non-cu-boulder/aws-cli-saml2aws-non-cu-boulder.md",
+      "source_url": "https://curc.readthedocs.io/en/latest/_sources/cloud/aws/lca0/getting-started/non-cu-boulder/aws-cli-saml2aws-non-cu-boulder.md",
+      "page_url": "https://curc.readthedocs.io/en/latest/cloud/aws/lca0/getting-started/non-cu-boulder/aws-cli-saml2aws-non-cu-boulder.html",
+      "output_file": "cloud/aws/lca0/getting-started/non-cu-boulder/aws-cli-saml2aws-non-cu-boulder.md"
+    }
+  ],
+  "failed_files": []
+}
