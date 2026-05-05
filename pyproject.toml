@@ -24,7 +24,12 @@ classifiers = [
 # Base deps cover Stages 1-3, 4a, 5, 6, 7. The GPU OCR stack (Stage 4b/4c) is
 # behind the `ocr` extra so CPU-only jobs don't pull torch/vllm.
 dependencies = [
-    # Stage 1 — catalog scrape (HTTP + HTML).
+    # Stage 1 — catalog scrape. dominiopublico.gov.br is behind a Cloudflare
+    # managed challenge (`cf-mitigated: challenge`); plain httpx GETs return
+    # 403. Playwright headless Chromium clears the challenge naturally. The
+    # Chromium binary is fetched out-of-band via `playwright install chromium`
+    # (see slurm/scrape_or_download.sh).
+    "playwright>=1.59,<2",
     "httpx>=0.28,<0.29",
     "beautifulsoup4>=4.14,<5",
     "lxml>=6.1,<7",
