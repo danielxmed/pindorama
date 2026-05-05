@@ -3,28 +3,40 @@
 #SBATCH --account=ucb-general
 #SBATCH --partition=amilan
 #SBATCH --qos=normal
-#SBATCH --time=06:00:00
+#SBATCH --time=01:30:00
 #SBATCH --nodes=1
-#SBATCH --ntasks=32
-#SBATCH --mem=64G
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=8G
 #SBATCH --output=/scratch/alpine/%u/pindorama/logs/triage-%j.out
 #SBATCH --error=/scratch/alpine/%u/pindorama/logs/triage-%j.err
 #
-# Stage 3 — triage. CPU-only, parallelized via multiprocessing.Pool.
-# For each downloaded PDF: open with pymupdf, sample first 5 pages, compute the
-# native-quality score, classify as native | needs_ocr | unusable.
+# Stage 3 — triage. CPU-only, sequential.
 #
-# 32 tasks per node fits aa milan node specs comfortably with 64 GB mem.
+# For every row with download_status='success' AND triage_status IS NULL,
+# open the PDF with pymupdf, sample the first 5 pages, and classify into
+# {native_extractable, needs_ocr, corrupted, too_small}. The result is
+# written back to works.triage_status and (on failure) works.error_log.
+#
+# Volume is ~2k PDFs at ~100 ms each → ~3 min sequential, well under the
+# 1h30 wall budget. If volume grows or per-doc cost rises, parallelize via
+# multiprocessing.Pool with a single DB-writer process.
+#
+# Resubmits are safe: idempotency comes from the `triage_status IS NULL`
+# filter in fetch_pending().
 set -euo pipefail
 
 module load slurm/alpine
+module load uv
 
-mkdir -p "/scratch/alpine/${USER}/pindorama/logs"
+PROJECT_ROOT="/projects/${USER}/pindorama/repo"
+SCRATCH_ROOT="/scratch/alpine/${USER}/pindorama"
 
-cd "${SLURM_SUBMIT_DIR}"
+mkdir -p "${SCRATCH_ROOT}/logs"
 
-echo "triage.sh: pipeline entry point not implemented yet" 1>&2
-exit 64
+cd "${PROJECT_ROOT}"
 
-# After Stage 3 lands:
-#   uv run python -m pindorama.triage   --db /scratch/alpine/$USER/pindorama/metadata.sqlite   --workers ${SLURM_NTASKS}
+uv sync --frozen
+
+uv run python -m pindorama.triage \
+  --db "${SCRATCH_ROOT}/metadata.sqlite"
