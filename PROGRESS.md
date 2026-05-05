@@ -9,9 +9,11 @@
 
 ## Next agent should start by…
 
-**Implement Stage 1 — the catalog scraper at `src/pindorama/scrape_catalog.py`**, modeled around `src/pindorama/db.py:connect()` for state and following the rate-limit / etiquette rules in `CLAUDE.md` (≤2 req/s against `dominiopublico.gov.br`). Pair the scraper with `tests/test_scrape_catalog.py` covering pagination edge cases (single page, empty page, malformed row), and keep the scraper idempotent against `metadata.sqlite`.
+**Awaiting Daniel's review/merge of the Stage 1 change** (working tree only — `src/pindorama/scrape_catalog.py` ~340 lines + 31 tests in `tests/test_scrape_catalog.py` + fixtures under `tests/fixtures/dominiopublico/`; `pyproject.toml` adds `playwright>=1.59,<2`; `slurm/scrape_or_download.sh` rewired into a real launcher; `uv.lock` regenerated). Validation already green on compute node (SLURM job 26677688, atesting partition, `bash scripts/check.sh --full`).
 
-`pyproject.toml` is now pinned (2026-05-04) and `uv.lock` is tracked. `bash scripts/check.sh --full` is green on a compute node. Use `uv sync --dev` for local testing; SLURM scripts that import the OCR stack must use `uv sync --extra ocr`.
+**After merge, implement Stage 2 — `src/pindorama/download_pdfs.py`.** Concretely: the catalog list does NOT expose `pdf_url`, so Stage 1 leaves that column NULL. Stage 2 must fetch each detail page (canonical `catalog_url` shape: `https://dominiopublico.gov.br/pesquisa/DetalheObraForm.do?co_obra=<id>`) and parse out the `Baixar` button URL `/pesquisa/DetalheObraDownload.do?co_obra=<id>&co_midia=2`. The detail page only populates correctly when the request includes `select_action=` (empty) AND a Referer header (observed via Chrome MCP during fixture capture). Whole domain is gated by Cloudflare managed challenge → Stage 2 must also use Playwright headless Chromium, not plain httpx. Model on `scrape_catalog.py` for browser lifecycle + rate-limit / SQLite state-machine patterns.
+
+`pyproject.toml` is pinned and `uv.lock` is tracked. Use `uv sync --dev` for local testing; SLURM scripts that import the OCR stack must use `uv sync --extra ocr`.
 
 ## Open verification questions for Daniel
 
@@ -23,12 +25,12 @@
 
 ### Currently open
 
-(none)
+1. **Live Playwright Chromium launch on compute nodes — does it actually work end-to-end?** The Stage 1 test suite is green (mocked Playwright), but the live scraper has not yet been driven against `dominiopublico.gov.br` from a compute node. The launcher in `slurm/scrape_or_download.sh` runs `playwright install chromium --no-deps` (cache pinned to `/projects/$USER/pindorama/playwright-browsers/`). If Chromium fails to launch for missing system libs at runtime, fallback runbook is to switch to apptainer per `docs/curc/software/apptainer.md`. Verify on first live run.
 
 ## Stage manifest
 
 ```
-[ ] Stage 1: catalog scrape         (src/pindorama/scrape_catalog.py, slurm/scrape_or_download.sh)
+[~] Stage 1: catalog scrape         (src/pindorama/scrape_catalog.py, slurm/scrape_or_download.sh) — implemented, awaiting Daniel's review/merge
 [ ] Stage 2: PDF download           (src/pindorama/download_pdfs.py,  slurm/scrape_or_download.sh)
 [ ] Stage 3: triage                 (src/pindorama/triage.py,         slurm/triage.sh)
 [ ] Stage 4a: native extraction     (src/pindorama/extract_native.py)
@@ -57,6 +59,7 @@
 - Post-edit hook runs `bash scripts/check.sh --fast` (lint only, ~sub-second).
 - A100 VRAM is **not** hardcoded; OCR scripts must query at runtime.
 - 2 req/s rate cap on `dominiopublico.gov.br` (scrape and download).
+- `dominiopublico.gov.br` is fronted by Cloudflare managed challenge (`cf-mitigated: challenge` on plain GETs). All fetches against the domain must go through Playwright headless Chromium — plain httpx returns 403. Chromium cache lives at `/projects/$USER/pindorama/playwright-browsers/` (NOT `~/.cache/`, which would blow the 2 GiB `/home` quota).
 
 ## Changelog
 
@@ -64,3 +67,4 @@
 - **2026-05-04** — Verification questions resolved. Q2 (storage home): Daniel confirmed `/projects/$USER/pindorama` — already the default in `paths.default()`, no code change. Q1 (deps): deferred — Daniel will research and pin `pyproject.toml` manually; agent must wait. Q3 (tokenizer): default `TucanoBR/Tucano-2b4` accepted by silence.
 - **2026-05-04** — Removed `PINDORAMA_BOOTSTRAP_PROMPT.md` (the bootstrap-time scaffolding prompt). Inlined the few load-bearing references; cluster repo path moved from `/projects/$USER/curc-docs` → `/projects/$USER/pindorama/repo`.
 - **2026-05-04** — Pinned `pyproject.toml` (Daniel delegated research). Python floor 3.11→3.12. Committed `uv.lock`. Validated on `atesting` partition: 207 packages resolved, 58 dev packages installed in 5s, `bash scripts/check.sh --full` green.
+- **2026-05-04** — Stage 1 (catalog scraper) implemented end-to-end; sensors green via SLURM job 26677688; awaiting Daniel's review/merge.

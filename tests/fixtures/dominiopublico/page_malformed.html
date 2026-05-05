@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html><head>
+<title>Domínio Público - Resultado da Pesquisa Básica</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body>
+<table id="results">
+  <tr><th>#</th><th></th><th>Título</th><th>Autor</th><th>Fonte</th><th>Formato</th><th>Tam. Arquivo</th><th>Acessos</th></tr>
+  <!-- Good row: should be parsed. -->
+  <tr>
+    <td>1 .</td>
+    <td><a href="DetalheObraForm.do?select_action=&amp;co_obra=7632"><img src="ico.gif" alt=""></a></td>
+    <td><a href="DetalheObraForm.do?select_action=&amp;co_obra=7632" target="_blank">14 de Julho na roça</a></td>
+    <td>Raul Pompéia</td><td>[bi] Biblioteca Virtual de Literatura</td><td>.pdf</td><td>873,48 KB</td><td>36.823</td>
+  </tr>
+  <!-- Malformed row 1: title cell has a link but the link text is empty (whitespace only). Skip + warn. -->
+  <tr>
+    <td>2 .</td>
+    <td><a href="DetalheObraForm.do?select_action=&amp;co_obra=7425"><img src="ico.gif" alt=""></a></td>
+    <td><a href="DetalheObraForm.do?select_action=&amp;co_obra=7425" target="_blank">   </a></td>
+    <td>Artur Azevedo</td><td>[bi] Biblioteca Virtual de Literatura</td><td>.pdf</td><td>71,52 KB</td><td>17.868</td>
+  </tr>
+  <!-- Malformed row 2: title cell has plain text, no anchor. Skip + warn. -->
+  <tr>
+    <td>3 .</td>
+    <td><img src="ico.gif" alt=""></td>
+    <td>Sem link</td>
+    <td>Author Whatever</td><td>[xx] Some Source</td><td>.pdf</td><td>10,00 KB</td><td>0</td>
+  </tr>
+  <!-- Good row: should also be parsed. -->
+  <tr>
+    <td>5 .</td>
+    <td><a href="DetalheObraForm.do?select_action=&amp;co_obra=7436"><img src="ico.gif" alt=""></a></td>
+    <td><a href="DetalheObraForm.do?select_action=&amp;co_obra=7436" target="_blank">A "Não-me-toques"!</a></td>
+    <td>Artur Azevedo</td><td>[bi] Biblioteca Virtual de Literatura</td><td>.pdf</td><td>71,10 KB</td><td>38.090</td>
+  </tr>
+</table>
+</body></html>
