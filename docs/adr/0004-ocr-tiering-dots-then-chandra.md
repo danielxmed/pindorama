@@ -1,7 +1,13 @@
 # ADR-0004 — OCR tiering: dots.ocr first, chandra-ocr fallback
 
-**Status:** Accepted
+**Status:** Superseded by [ADR-0005](0005-chandra-as-stage-4b-primary.md) (2026-05-05)
 **Date:** 2026-05-04
+
+> The tiering plan in this document was never executed. Stage 4b implementation
+> ran into a hard incompatibility between `vllm` (the chosen dots.ocr server)
+> and the CURC Alpine image (RHEL 8.10 / glibc 2.28). Stage 4b was re-scoped
+> to use chandra-ocr-2 as the unconditional primary OCR; ADR-0005 records the
+> new design.
 
 ## Context
 
